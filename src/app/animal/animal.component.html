@@ -1,0 +1,13 @@
+<p>Animal Component works</p>
+
+<ul>
+  <li *ngFor="let animal of animals$">
+    <a
+      routerLinkActive="active"
+      [routerLink]="['/animal', animal.fields.name.stringValue]"
+      >{{ animal.fields.name.stringValue }}</a
+    >
+  </li>
+</ul>
+
+<router-outlet></router-outlet>
