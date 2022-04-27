@@ -8,6 +8,8 @@ import { Observable, timer, of, tap, map } from 'rxjs';
 
 @Injectable()
 export class AdminGuard implements CanActivate {
+  // canActivate method is executed for the routes which has guards
+
   canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot

@@ -1,13 +1,13 @@
-<p>Animal Component works</p>
+<p>Select animal to see details</p>
 
-<ul>
-  <li *ngFor="let animal of animals$">
-    <a
-      routerLinkActive="active"
-      [routerLink]="['/animal', animal.fields.name.stringValue]"
-      >{{ animal.fields.name.stringValue }}</a
-    >
-  </li>
-</ul>
-
+<mat-selection-list [multiple]="false">
+  <mat-list-option
+    *ngFor="let animal of animals$"
+    routerLinkActive="active"
+    [routerLink]="['/animal', animal.fields.name.stringValue]"
+  >
+    <a>{{ animal.fields.name.stringValue }}</a>
+  </mat-list-option>
+</mat-selection-list>
+<!-- Below router outlet is for the child routes. so we have Parent and Child component both in same page -->
 <router-outlet></router-outlet>

@@ -1,4 +1,8 @@
 <p>animal-detail works!</p>
+<div
+  style="display:flex; flex-direction: column; justify-content: center; align-items: center "
+>
+  <p>Animal Selected -> {{ animal$.name.stringValue }}</p>
 
-<p>Animal Selected -> {{ animal$.name.stringValue }}</p>
-<img [src]="[animal$.imgUrl.stringValue]" height="100px" />
+  <img [src]="[animal$.imgUrl.stringValue]" height="100px" />
+</div>

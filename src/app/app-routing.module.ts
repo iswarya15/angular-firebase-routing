@@ -17,6 +17,7 @@ const Routes = [
         path: ':name',
         component: AnimalDetailComponent,
         resolve: {
+          // data property will store an observable and we can access it from ActivatedRoute and subscribe to it in child component
           data: PreloadGuard,
         },
       },
@@ -26,11 +27,13 @@ const Routes = [
     path: '',
     component: HelloComponent,
   },
+  // Incase of redirect, pathMatch property is required
   {
     path: 'animalss',
     redirectTo: 'animal',
     pathMatch: 'full',
   },
+  // Wildcard route should always be the last
   {
     path: '**',
     component: ErrorComponent,

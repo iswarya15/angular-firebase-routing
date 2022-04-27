@@ -15,6 +15,7 @@ export class AnimalDetailComponent implements OnInit {
   ngOnInit() {
     this.router.data.subscribe(
       (response) => {
+        console.log('Route Data => ', response);
         this.animal$ = response.data['fields'];
         console.log(this.animal$);
       },
